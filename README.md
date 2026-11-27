@@ -16,7 +16,7 @@ Proyek ini berfokus pada proses pembersihan data (*data cleaning*), eksplorasi d
 * `pandas` & `numpy`
 * `matplotlib`
 * `scikit-learn`
-* `prophet` (opsional, untuk *time series forecasting*)
+* `seaborn`
 
 ## Cara Menjalankan
 1. Buka notebook di **Google Colab** atau lingkungan Jupyter/Python lokal Anda.
