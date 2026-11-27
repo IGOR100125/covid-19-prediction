@@ -5,7 +5,7 @@ Proyek ini berfokus pada proses pembersihan data (*data cleaning*), eksplorasi d
 ## Fitur Utama
 * **Data Cleaning & Preprocessing:** Memfilter data skala nasional (`Indonesia`), mengonversi kolom tanggal ke format `datetime`, mengurutkan data secara kronologis, serta menangani *missing values*.
 * **Visualisasi Tren:** Memvisualisasikan kasus baru harian dan *moving average* 7 hari untuk melihat pola gelombang kasus.
-* **Pemodelan Prediksi (*Forecasting*):** Menggunakan fitur *lag* dengan model regresi (seperti `RandomForestRegressor`) dan/atau model deret waktu (`Prophet`) untuk memprediksi tren ke depan serta mengevaluasinya dengan metrik MAE dan RMSE.
+* **Pemodelan Prediksi (*Forecasting*):** Menggunakan fitur *lag* dengan model regresi (seperti `RandomForestRegressor`) dan/atau model deret waktu untuk memprediksi tren ke depan serta mengevaluasinya dengan metrik MAE dan RMSE.
 
 ## Struktur Proyek
 * `notebook.ipynb` — Notebook utama berisi alur pembersihan data, visualisasi, dan pemodelan prediksi di Google Colab.
