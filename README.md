@@ -1,73 +1,28 @@
-Analisis & Prediksi Data COVID-19 Indonesia
+# Analisis & Prediksi Data COVID-19 di Indonesia
 
-Proyek ini berisi eksplorasi data, visualisasi tren, dan pemodelan prediksi kasus COVID-19 di Indonesia menggunakan Python dan Google Colab.
+Proyek ini berfokus pada proses pembersihan data (*data cleaning*), eksplorasi dan visualisasi tren deret waktu (*time series*), serta pemodelan prediksi kasus COVID-19 di Indonesia menggunakan Python di Google Colab.
 
-Gambaran Umum (Overview)
+## Fitur Utama
+* **Data Cleaning & Preprocessing:** Memfilter data skala nasional (`Indonesia`), mengonversi kolom tanggal ke format `datetime`, mengurutkan data secara kronologis, serta menangani *missing values*.
+* **Visualisasi Tren:** Memvisualisasikan kasus baru harian dan *moving average* 7 hari untuk melihat pola gelombang kasus.
+* **Pemodelan Prediksi (*Forecasting*):** Menggunakan fitur *lag* dengan model regresi (seperti `RandomForestRegressor`) dan/atau model deret waktu (`Prophet`) untuk memprediksi tren ke depan serta mengevaluasinya dengan metrik MAE dan RMSE.
 
-Tujuan utama proyek ini adalah menganalisis pola perkembangan kasus COVID-19 di Indonesia secara historis serta membangun model forecasting untuk memperkirakan tren kasus ke depan berdasarkan data deret waktu (time series).
+## Struktur Proyek
+* `notebook.ipynb` — Notebook utama berisi alur pembersihan data, visualisasi, dan pemodelan prediksi di Google Colab.
+* `README.md` — Dokumentasi proyek.
 
-Dataset
+## Teknologi & Pustaka
+* Python 3
+* `pandas` & `numpy`
+* `matplotlib`
+* `scikit-learn`
+* `prophet` (opsional, untuk *time series forecasting*)
 
-Data bersumber dari dataset publik COVID-19 Indonesia (seperti dataset time series COVID-19 Indonesia di Kaggle) yang memuat informasi harian maupun kumulatif, antara lain:
+## Cara Menjalankan
+1. Buka notebook di **Google Colab** atau lingkungan Jupyter/Python lokal Anda.
+2. Muat dataset COVID-19 Indonesia (misalnya dari Kaggle) ke dalam *DataFrame* `df`.
+3. Jalankan sel secara berurutan mulai dari pembersihan data, visualisasi, hingga pelatihan dan evaluasi model.
 
-Date: Tanggal pencatatan data
-
-Location: Wilayah/lokasi (tingkat Nasional seperti Indonesia maupun tingkat Provinsi)
-
-New Cases & Total Cases: Kasus positif harian dan kumulatif
-
-New Deaths & Total Deaths: Kematian harian dan kumulatif
-
-New Recovered & Total Recovered: Kesembuhan harian dan kumulatif
-
-Alur Kerja (Workflow)
-
-Pembersihan & Preparasi Data (Data Cleaning)
-
-Memfilter data skala nasional (Location == 'Indonesia').
-
-Mengonversi kolom Date ke format datetime dan mengurutkannya secara kronologis.
-
-Memeriksa missing values serta memilih kolom utama yang relevan.
-
-Analisis Eksploratif & Visualisasi
-
-Memvisualisasikan tren kasus harian dan kumulatif.
-
-Menggunakan 7-day moving average untuk menghaluskan fluktuasi harian dan melihat gelombang kasus secara lebih jelas.
-
-Pemodelan Prediksi (Forecasting)
-
-Pendekatan Machine Learning (misalnya Random Forest Regressor): Memanfaatkan fitur lag (kasus pada beberapa hari sebelumnya) dan membagi data secara kronologis menjadi data latih (train) dan data uji (test).
-
-Pendekatan Time Series (misalnya Prophet): Memodelkan tren serta pola musiman mingguan/tahunan untuk proyeksi beberapa hari ke depan.
-
-Evaluasi Model
-
-Mengukur akurasi prediksi menggunakan metrik seperti MAE (Mean Absolute Error) dan RMSE (Root Mean Squared Error).
-
-Cara Menjalankan di Google Colab
-
-Buka file notebook (.ipynb) di Google Colab.
-
-Unggah file dataset (.csv) ke lingkungan Colab atau hubungkan dengan Google Drive.
-
-Jalankan setiap sel secara berurutan mulai dari import library, pembersihan data, visualisasi, hingga pelatihan dan evaluasi model.
-
-(Opsional) Jika menggunakan library tambahan seperti prophet, jalankan instalasi terlebih dahulu (!pip install prophet).
-
-Teknologi & Libraries
-
-Python
-
-Pandas & NumPy (manipulasi dan komputasi data)
-
-Matplotlib / Seaborn (visualisasi data)
-
-Scikit-learn (pemodelan machine learning & metrik evaluasi)
-
-Prophet (pemodelan time series forecasting)
-
-Catatan
-
-Hasil prediksi sangat bergantung pada kualitas data historis, perubahan kebijakan kesehatan masyarakat, varian virus, serta dinamika pelaporan kasus di lapangan, sehingga sebaiknya digunakan sebagai bahan analisis eksploratif dan pembelajaran.
+## Evaluasi & Catatan
+* Pembagian data latih dan uji dilakukan secara kronologis agar tidak terjadi kebocoran informasi masa depan (*data leakage*).
+* Hasil prediksi sangat bergantung pada kualitas data historis dan perubahan pola pelaporan maupun dinamika kasus di lapangan.
