@@ -18,11 +18,8 @@ Proyek ini berfokus pada proses pembersihan data (*data cleaning*), eksplorasi d
 * `scikit-learn`
 * `seaborn`
 
-## Cara Menjalankan
-1. Buka notebook di **Google Colab** atau lingkungan Jupyter/Python lokal Anda.
-2. Muat dataset COVID-19 Indonesia (misalnya dari Kaggle) ke dalam *DataFrame* `df`.
-3. Jalankan sel secara berurutan mulai dari pembersihan data, visualisasi, hingga pelatihan dan evaluasi model.
-
 ## Evaluasi & Catatan
 * Pembagian data latih dan uji dilakukan secara kronologis agar tidak terjadi kebocoran informasi masa depan (*data leakage*).
 * Hasil prediksi sangat bergantung pada kualitas data historis dan perubahan pola pelaporan maupun dinamika kasus di lapangan.
+
+## Cara Menjalankan Kode 🚀 1. *Clone* repository ini ke komputer lokal Anda: ```bash git clone [https://github.com/IGOR100125/breast-cancer-prediction.git](https://github.com/IGOR100125/covid-19-prediction.git)
